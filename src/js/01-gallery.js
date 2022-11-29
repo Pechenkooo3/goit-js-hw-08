@@ -4,8 +4,6 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 import { galleryItems } from './gallery-items';
 // Change code below this line
 
-console.log(galleryItems);
-
 const imgGalleryEl = document.querySelector('.gallery');
 const markupGallery = createMarkUp(galleryItems);
 imgGalleryEl.innerHTML = markupGallery;
@@ -22,15 +20,7 @@ function createMarkUp(galleryItems) {
     .join('');
 }
 
-imgGalleryEl.insertAdjacentHTML('beforeend', galleryItems);
-// imgGalleryEl.addEventListener('click', onClickImg);
-
-// let instance = '';
-// function onClickImg(event) {
-//   event.preventDefault();
-//   if (event.target.nodeName !== 'IMG') {
-//     return;
-//   }
+// imgGalleryEl.insertAdjacentHTML('beforeend', galleryItems);
 
 new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
